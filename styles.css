@@ -1,0 +1,257 @@
+/* Main Styles */
+body {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero-image {
+    background-image: url('images/compromiso1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    /* background: #cbad8dcd; */
+    background-color: #d4af37;
+    transform: translateX(-50%); 
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    padding-right: 50%;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    padding-right: 0;
+    padding-left: 50%;
+    text-align: left;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #d4af37;
+    border-radius: 50%;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 80%;
+    margin-left: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+/* Gallery Styles */
+.gallery-img {
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+.img-1 {
+    background-image: url('images/compromiso2.jpg');
+}
+
+.img-2 {
+    background-image: url('images/compromiso8.jpg');
+}
+
+.img-3 {
+    background-image: url('images/compromiso3.jpg');
+}
+
+.img-4 {
+    background-image: url('images/compromiso4.jpg');
+}
+
+/* Sección de Evento - imagen de fondo con superposición */
+#evento {
+    position: relative;
+    background-color: #cbad8dcd; /* Mantiene el color de fondo original */
+    z-index: 1;
+}
+
+#evento::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/compromiso6.jpg'); /* Reemplazar con tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto parallax opcional */
+    opacity: 0.15; /* Ajusta la opacidad según necesites */
+    z-index: -1;
+}
+
+/* Para añadir elementos decorativos en las esquinas */
+.corner-decoration {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+    opacity: 0.6;
+    pointer-events: none; /* Asegura que no interfiera con los clicks */
+}
+
+/* Esquina superior izquierda */
+.corner-top-left {
+    top: 20px;
+    left: 20px;
+    background-image: url('images/corner-decoration.png'); /* Reemplazar con tu imagen */
+}
+
+/* Esquina inferior derecha */
+.corner-bottom-right {
+    bottom: 20px;
+    right: 20px;
+    background-image: url('images/corner-decoration.png'); /* Reemplazar con tu imagen */
+    transform: rotate(180deg);
+}
+
+/* Sección de Regalos - imagen de fondo con superposición */
+#regalos {
+    position: relative;
+    background-color: #cbad8dcd; /* Mantiene el color de fondo original */
+    z-index: 1;
+}
+
+#regalos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/compromiso6.jpg'); /* Reemplazar con tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto parallax opcional */
+    opacity: 0.15; /* Ajusta la opacidad según necesites */
+    z-index: -1;
+}
+
+/* Imagen decorativa flotante - se puede usar en cualquier sección */
+.floating-decoration {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.floating-right {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-image: url('images/decoration-flowers.png'); /* Reemplazar con tu imagen */
+}
+
+.floating-left {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-image: url('images/decoration-leaves.png'); /* Reemplazar con tu imagen */
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item, .timeline-item:nth-child(even) {
+        padding-right: 0;
+        padding-left: 60px;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+    
+    .timeline-item::after, .timeline-item:nth-child(even)::after {
+        left: 30px;
+    }
+    
+    .timeline-content, .timeline-item:nth-child(even) .timeline-content {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .corner-decoration {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .floating-decoration {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Animations */
+.countdown-value {
+    position: relative;
+}
+
+.countdown-value.animate {
+    animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}

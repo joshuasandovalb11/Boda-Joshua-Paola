@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Joshua & Paola - Nuestra Boda</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Animation Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'wedding-white': '#ffffff',
+                        'wedding-gold': '#d4af37',
+                        'wedding-beige': '#cbad8dcd;',
+                        // 'wedding-beige': '#7A8764',
+                        'wedding-dark': '#444444',
+                    },
+                    fontFamily: {
+                        'great-vibes': ['"Great Vibes"', 'cursive'],
+                        'cormorant': ['"Cormorant Garamond"', 'serif'],
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-montserrat bg-wedding-beige text-wedding-dark overflow-x-hidden"></body>
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center hero-image"></div>
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="relative flex flex-col justify-center items-center h-full text-white text-center px-4">
+            <h1 class="font-great-vibes text-6xl md:text-8xl mb-4 animate__animated animate__fadeIn">Joshua  &  Paola</h1>
+            <div class="flex flex-row space-x-2 md:space-x-4 animate__animated animate__fadeIn animate__delay-2s mt-px-10">
+                <div class="bg-white/20 backdrop-blur-sm rounded-lg text-center py-2 px-3 md:px-6">
+                    <span class="block text-2xl md:text-3xl font-cormorant font-semibold countdown-value" id="days">00</span>
+                    <span class="text-xs md:text-sm uppercase tracking-wider">días</span>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-lg text-center py-2 px-3 md:px-6">
+                    <span class="block text-2xl md:text-3xl font-cormorant font-semibold countdown-value" id="hours">00</span>
+                    <span class="text-xs md:text-sm uppercase tracking-wider">horas</span>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-lg text-center py-2 px-3 md:px-6">
+                    <span class="block text-2xl md:text-3xl font-cormorant font-semibold countdown-value" id="minutes">00</span>
+                    <span class="text-xs md:text-sm uppercase tracking-wider">minutos</span>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-lg text-center py-2 px-3 md:px-6">
+                    <span class="block text-2xl md:text-3xl font-cormorant font-semibold countdown-value" id="seconds">00</span>
+                    <span class="text-xs md:text-sm uppercase tracking-wider">segundos</span>
+                </div>
+            </div>
+            <p class="mt-6 font-cormorant text-xl animate__animated animate__fadeIn animate__delay-3s">25 de Julio de 2025</p>
+        </div>
+        <div class="absolute bottom-8 left-0 right-0 flex justify-center animate__animated animate__fadeInUp animate__delay-3s">
+            <a href="#fotos" class="text-white hover:text-wedding-gold transition-colors duration-300">
+                <i class="fas fa-chevron-down text-2xl animate-bounce"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="fotos" class="w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <!-- Primera foto vertical a pantalla completa -->
+            <div class="h-[45vh] md:h-[90vh]">
+                <div class="gallery-img bg-cover bg-center h-full img-1"></div>
+            </div>
+            
+            <!-- Segunda foto vertical a pantalla completa -->
+            <div class="h-[45vh] md:h-[90vh]">
+                <div class="gallery-img bg-cover bg-center h-full img-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section id="evento" class="py-20 bg-wedding-beige">
+        <div class="corner-decoration corner-top-left"></div>
+        <div class="corner-decoration corner-bottom-right"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="font-great-vibes text-4xl md:text-5xl text-center mb-16 text-wedding-white" data-aos="fade-up">El Evento</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Ceremony -->
+                <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-right">
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-wedding-gold/10 rounded-full p-4">
+                            <i class="fas fa-church text-3xl text-wedding-gold"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-cormorant text-2xl font-semibold text-center mb-4">Ceremonia</h3>
+                    <div class="space-y-3 text-center">
+                        <p><i class="far fa-calendar-alt mr-2 text-wedding-gold"></i> Jueves, 24 de Julio de 2025</p>
+                        <p><i class="far fa-clock mr-2 text-wedding-gold"></i> 16:00 hrs</p>
+                        <p><i class="fas fa-map-marker-alt mr-2 text-wedding-gold"></i> Catedral de Santa María</p>
+                        <p class="text-sm">Paseo Del Rio 6832, Esq, Cam. Vecinal Oriente Col, 3rd Etapa Rio, 22226 Tijuana, B.C.</p>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <a href="https://maps.app.goo.gl/PPSmbJoCGS2vHqPT6" class="inline-flex items-center text-wedding-gold hover:text-wedding-dark transition-colors duration-300">
+                            <i class="fas fa-map-marked-alt mr-2"></i> Ver en Google Maps
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Reception -->
+                <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-left">
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-wedding-gold/10 rounded-full p-4">
+                            <i class="fas fa-glass-cheers text-3xl text-wedding-gold"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-cormorant text-2xl font-semibold text-center mb-4">Recepción</h3>
+                    <div class="space-y-3 text-center">
+                        <p><i class="far fa-calendar-alt mr-2 text-wedding-gold"></i> Viernes, 25 de Julio de 2025</p>
+                        <p><i class="far fa-clock mr-2 text-wedding-gold"></i> 18:00 hrs</p>
+                        <p><i class="fas fa-map-marker-alt mr-2 text-wedding-gold"></i> Hacienda Los Olivos</p>
+                        <p class="text-sm">Camino Rural 456, Ciudad</p>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <a href="#" class="inline-flex items-center text-wedding-gold hover:text-wedding-dark transition-colors duration-300">
+                            <i class="fas fa-map-marked-alt mr-2"></i> Ver en Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Info Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-8 mt-10">
+                <!-- Dress Code -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center" data-aos="fade-up">
+                    <div class="flex justify-center mb-4">
+                        <div class="bg-wedding-gold/10 rounded-full p-3">
+                            <i class="fas fa-tshirt text-2xl text-wedding-gold"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-cormorant text-xl font-semibold mb-2">Código de Vestimenta</h3>
+                    <p>Formal / Semi-formal</p>
+                    <p class="text-sm mt-2">Los caballeros en traje oscuro y las damas en vestido cóctel.</p>
+                </div>
+            </div>
+            
+            <!-- Location Map -->
+            <div class="mt-16" data-aos="zoom-in">
+                <h3 class="font-cormorant text-2xl font-semibold text-center mb-6 text-wedding-white">Ubicación</h3>
+                <div class="rounded-lg overflow-hidden shadow-lg h-80">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.3989143149374!2d-116.93188302407648!3d32.488765573785344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d938f1aa8ed24f%3A0xae99603838aa7b0d!2sTemplo%20de%20Tijuana%20M%C3%A9xico!5e0!3m2!1ses-419!2smx!4v1744841036874!5m2!1ses-419!2smx" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="fotos2" class="w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <!-- Primera foto vertical a pantalla completa -->
+            <div class="h-[45vh] md:h-[90vh]">
+                <div class="gallery-img bg-cover bg-center h-full img-3"></div>
+            </div>
+            
+            <!-- Segunda foto vertical a pantalla completa -->
+            <div class="h-[45vh] md:h-[90vh]">
+                <div class="gallery-img bg-cover bg-center h-full img-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Registry Section -->
+    <section id="regalos" class="py-20 bg-wedding-beige">
+        <div class="floating-decoration floating-right"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="font-great-vibes text-4xl md:text-5xl text-center mb-16 text-wedding-white" data-aos="fade-up">Mesa de Regalos</h2>
+            
+            <div class="max-w-3xl mx-auto text-center mb-10 text-wedding-white" data-aos="fade-up">
+                <p class="mb-6">El mejor regalo es tu presencia en nuestro día especial. Sin embargo, si deseas obsequiarnos algo, hemos preparado algunas opciones:</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Amazon Wishlist -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center" data-aos="fade-up">
+                    <div class="bg-wedding-gold/10 inline-block rounded-full p-4 mb-4">
+                        <i class="fab fa-amazon text-3xl text-wedding-gold"></i>
+                    </div>
+                    <h3 class="font-cormorant text-xl font-semibold mb-4">Amazon Wishlist</h3>
+                    <p class="mb-6">Hemos creado una lista con artículos que nos encantaría recibir para nuestro nuevo hogar.</p>
+                    <a href="https://www.amazon.com.mx/wedding/share/sandovalsilva" class="inline-block bg-wedding-gold text-white py-2 px-6 rounded-full hover:bg-wedding-gold/80 transition-colors duration-300">Ver Mesa de Regalos</a>
+                </div>
+                
+                <!-- Cash Gift -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-wedding-gold/10 inline-block rounded-full p-4 mb-4">
+                        <i class="fas fa-gift text-3xl text-wedding-gold"></i>
+                    </div>
+                    <h3 class="font-cormorant text-xl font-semibold mb-4">Lluvia de Sobres</h3>
+                    <p class="mb-6">Un detalle monetario para ayudarnos a iniciar nuestro matrimonio..</p>
+                    <button class="inline-block bg-wedding-gold text-white py-2 px-6 rounded-full hover:bg-wedding-gold/80 transition-colors duration-300" id="showBankDetails">Ver Datos Bancarios</button>
+                </div>
+                
+                <!-- Physical Registry -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-wedding-gold/10 inline-block rounded-full p-4 mb-4">
+                        <i class="fas fa-store text-3xl text-wedding-gold"></i>
+                    </div>
+                    <h3 class="font-cormorant text-xl font-semibold mb-4">Tienda Departamental</h3>
+                    <p class="mb-6">Si prefieren adquirirlo en otra tienda, son bienvenidos a hacerlo. Les agradeceríamos que nos lo hicieran saber para poder
+                        eliminar el artículo de nuestra lista en Amazon.</p>
+                    <!-- <a href="#" class="inline-block bg-wedding-gold text-white py-2 px-6 rounded-full hover:bg-wedding-gold/80 transition-colors duration-300">Ver Mesa de Regalos</a> -->
+                </div>
+            </div>
+            
+            <!-- Bank Details Modal -->
+            <div id="bankDetailsModal" class="fixed inset-0 z-50 hidden">
+                <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+                <div class="relative max-w-md mx-auto mt-20 bg-white rounded-lg shadow-xl p-6">
+                    <button id="closeModal" class="absolute top-4 right-4 text-wedding-dark hover:text-wedding-gold">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                    <h3 class="font-cormorant text-2xl font-semibold text-center mb-6">Datos Bancarios</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm text-gray-500">Banco:</p>
+                            <p class="font-medium">BBVA Bancomer</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Titular:</p>
+                            <p class="font-medium">Paola Jariany Silva Ramirez</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Cuenta:</p>
+                            <p class="font-medium">4152313983338448</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-great-vibes text-4xl md:text-5xl text-center mb-8 text-wedding-gold" data-aos="fade-up">Confirma tu Asistencia</h2>
+            <p class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">Por favor confirma tu asistencia antes del 20 de mayo de 2025. Tu presencia hará de este día algo aún más especial.</p>
+            
+            <div class="max-w-md mx-auto">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-lg p-8" data-aos="fade-up">
+                    <div class="text-center mb-6">
+                        <p class="font-cormorant text-2xl">RSVP</p>
+                        <p class="text-wedding-black">Por favor responde antes del 20/05/2025</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="text-center mt-6">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSclFcJ8JyvteFFoHwiXhQa7ZgtE1aow1qew6z-eCcuURoLWvQ/viewform?usp=dialog" class="inline-block bg-wedding-gold text-white py-2 px-6 rounded-full hover:bg-wedding-gold/80 transition-colors duration-300 flex items-center justify-center mt-4" target="_blank">
+                                <i class="fab fa-google mr-2"></i> Responde a través de Google Forms
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 text-center">
+                        <p class="text-gray-500 text-sm">También puedes confirmar a través de WhatsApp:</p>
+                        <a href="https://wa.me/526861142765?text=Hola,%20quiero%20hablar%20contigo%20respecto%20a%20la%20invitacion%20de%20la%20boda" class="inline-flex items-center text-wedding-gold hover:text-wedding-dark transition-colors duration-300">
+                            <i class="fab fa-whatsapp mr-2"></i> +52 (686) 114 2765
+                        </a>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-wedding-dark text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="font-great-vibes text-4xl mb-4">Joshua & Paola</h2>
+                <p class="font-cormorant">¡Esperamos celebrar juntos este día tan especial!</p>
+            </div>
+            
+            <div class="text-center text-sm text-gray-400">
+                <p>© 2025 Joshua & Paola - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="script.js"></script>
+</body>
+</html>
