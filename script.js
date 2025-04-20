@@ -1,6 +1,6 @@
 // Countdown Timer Function
 function updateCountdown() {
-    const weddingDate = new Date('July 18, 2025 00:00:00').getTime();
+    const weddingDate = new Date('July 25, 2025 18:00:00').getTime();
     const now = new Date().getTime();
     const timeLeft = weddingDate - now;
     
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mapContainer.style.cursor = 'pointer';
         mapContainer.addEventListener('click', () => {
             // Update this URL to the exact location of your venue
-            window.open('https://maps.app.goo.gl/PPSmbJoCGS2vHqPT6', '_blank');
+            window.open('https://maps.app.goo.gl/VgWevh1E6f6USGNq6', '_blank');
         });
         
         // Add an overlay to make it clear the map is clickable
